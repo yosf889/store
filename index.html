@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عارض ضمان المنتج</title>
+    <title>شركة ميديا ستار</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -22,7 +22,7 @@
             color: #ffffff;
         }
 
-        /* تعتيم + تغويش */
+        /* تغويش + تعتيم */
         body::before {
             content: "";
             position: absolute;
@@ -43,71 +43,70 @@
             padding: 16px;
         }
 
-        /* البطاقة الرئيسية */
         .card {
             width: 100%;
             max-width: 420px;
             background: rgba(255, 255, 255, 0.07);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(120, 255, 180, 0.35);
-            box-shadow: 0 0 35px rgba(90, 255, 155, 0.35);
+            border-radius: 18px;
+            padding: 24px 18px;
             text-align: center;
+            border: 1px solid rgba(160, 120, 255, 0.3);
+            box-shadow: 0 0 30px rgba(140, 90, 255, 0.35);
         }
 
-        /* شريط الضمان */
-        .warranty {
-            padding: 22px 16px;
-            background: linear-gradient(
-                135deg,
-                rgba(90, 255, 155, 0.22),
-                rgba(90, 180, 255, 0.18)
-            );
-        }
-
-        .warranty-label {
-            font-size: 14px;
-            color: #d8ffe9;
-            margin-bottom: 6px;
-        }
-
-        .warranty-status {
-            font-size: 22px;
+        .title {
+            font-size: 24px;
             font-weight: 700;
-            color: #5cff9b;
-            text-shadow: 0 0 10px rgba(90, 255, 155, 0.7);
-        }
-
-        /* محتوى ثانوي */
-        .content {
-            padding: 20px 18px 22px;
-        }
-
-        .company {
-            font-size: 20px;
-            font-weight: 600;
-            color: #f1eaff;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
+            color: #f2eaff;
+            text-shadow: 0 0 10px rgba(180, 120, 255, 0.7);
         }
 
         .links {
             display: flex;
             flex-direction: column;
             gap: 12px;
+            margin-bottom: 22px;
         }
 
         .links a {
+            display: block;
             text-decoration: none;
-            padding: 13px;
+            padding: 14px;
             border-radius: 12px;
-            font-size: 15px;
+            font-size: 16px;
             color: #ffffff;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(120, 180, 255, 0.35);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(120, 180, 255, 0.4);
         }
 
         .links a:active {
-            background: rgba(160, 120, 255, 0.28);
+            background: rgba(160, 120, 255, 0.3);
+        }
+
+        .status {
+            padding-top: 16px;
+            border-top: 1px dashed rgba(200, 180, 255, 0.35);
+        }
+
+        .status-label {
+            font-size: 14px;
+            color: #d0d0d0;
+            margin-bottom: 6px;
+        }
+
+        .status-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #5cff9b;
+            text-shadow: 0 0 8px rgba(90, 255, 155, 0.6);
+        }
+
+        /* تحسين إضافي للشاشات الكبيرة (اختياري) */
+        @media (min-width: 768px) {
+            .title {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
@@ -116,20 +115,15 @@
     <div class="wrapper">
         <div class="card">
 
-            <!-- الضمان (الأهم) -->
-            <div class="warranty">
-                <div class="warranty-label">صلاحية الضمان</div>
-                <div class="warranty-status">نشط (فعال)</div>
+            <div class="title">شركة ميديا ستار</div>
+
+            <div class="links">
+                <a href="" target="_blank">فيسبوك</a>
+                <a href="https://wa.me/message/HFIJDUZUP7PEF1" target="_blank">واتساب</a>
             </div>
 
-            <!-- معلومات ثانوية -->
-            <div class="content">
-                <div class="company">شركة ميديا ستار</div>
-
-                <div class="links">
-                    <a href="https://fb.me/mdia" target="_blank">فيسبوك</a>
-                    <a href="https://whsapi/meia" target="_blank">واتساب</a>
-                </div>
+            <div class="status">
+                <a href="view.html" target="_blank">عرض الضمان</a>
             </div>
 
         </div>
